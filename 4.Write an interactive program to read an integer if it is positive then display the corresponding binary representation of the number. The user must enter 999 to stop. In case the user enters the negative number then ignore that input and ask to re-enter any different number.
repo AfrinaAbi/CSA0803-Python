@@ -1,0 +1,32 @@
+
+public class BinaryRepresentation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        while (true) {
+            System.out.print("Enter a positive integer (999 to stop): ");
+            int number = scanner.nextInt();
+            
+            if (number == 999) {
+                System.out.println("Exiting the program.");
+                break;
+            } else if (number < 0) {
+                System.out.println("Negative number ignored. Please enter a positive integer.");
+                continue;
+            } else {
+                String binaryRepresentation = Integer.toBinaryString(number);
+                System.out.println("Binary representation: " + binaryRepresentation);
+            }
+        }
+        
+        scanner.close();
+    }
+}
+OUTPUT:Enter a positive integer (999 to stop): 10
+Binary representation: 1010
+Enter a positive integer (999 to stop): 5
+Binary representation: 101
+Enter a positive integer (999 to stop): -7
+Negative number ignored. Please enter a positive integer.
+Enter a positive integer (999 to stop): 999
+Exiting the program.
