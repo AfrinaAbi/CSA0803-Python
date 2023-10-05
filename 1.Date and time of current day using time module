@@ -1,0 +1,19 @@
+import time
+
+# Get the current time in seconds since the epoch (January 1, 1970)
+current_time = time.time()
+
+# Convert the timestamp to a struct_time object
+current_time_struct = time.localtime(current_time)
+
+# Extract and format the date and time components
+current_date = time.strftime("%Y-%m-%d", current_time_struct)
+current_time = time.strftime("%H:%M:%S", current_time_struct)
+
+# Print the current date and time
+print("Current Date:", current_date)
+print("Current Time:", current_time)
+
+
+OUTPUT:Current Date: 2023-10-05
+Current Time: 13:43:39
