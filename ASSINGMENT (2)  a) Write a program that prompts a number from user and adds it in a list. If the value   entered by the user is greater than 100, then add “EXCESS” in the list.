@@ -1,0 +1,29 @@
+numbers_list = []
+
+while True:
+    try:
+        user_input = input("Enter a number (or 'q' to quit): ")
+        
+        if user_input.lower() == 'q':
+            break
+
+        number = float(user_input)
+
+        if number > 100:
+            numbers_list.append("EXCESS")
+        else:
+            numbers_list.append(number)
+    
+    except ValueError:
+        print("Invalid input. Please enter a valid number or 'q' to quit.")
+
+print("List:", numbers_list)
+ OUTPUT:Enter a number (or 'q' to quit): 50
+Enter a number (or 'q' to quit): 120
+Enter a number (or 'q' to quit): 75
+Enter a number (or 'q' to quit): abc
+Invalid input. Please enter a valid number or 'q' to quit.
+Enter a number (or 'q' to quit): 200
+Enter a number (or 'q' to quit): q
+List: [50.0, 'EXCESS', 75.0, 'EXCESS']
+
