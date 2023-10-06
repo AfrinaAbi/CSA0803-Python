@@ -1,0 +1,13 @@
+# Function to create a new tuple with topper details
+def create_topper_tuple(name, roll_number, marks):
+    return (name, roll_number, marks)
+
+# Function to edit topper details
+def edit_topper_details(topper_list, roll_number, new_name, new_marks):
+    updated_topper_list = list(topper_list)
+    for i, topper in enumerate(updated_topper_list):
+        if topper[1] == roll_number:
+            updated_topper_list[i] = (new_name, roll_number, new_marks)
+            return tuple(updated_topper_list)
+    return None
+
