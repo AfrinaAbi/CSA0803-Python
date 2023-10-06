@@ -1,0 +1,25 @@
+# Function to read and display questions from Questions.txt
+def display_questions(filename):
+    with open(filename, 'r') as file:
+        questions = file.readlines()
+    for line in questions:
+        print(line.strip())
+
+# Function to read and display answers from Answers.txt
+def display_answers(filename):
+    with open(filename, 'r') as file:
+        answers = file.readlines()
+    for line in answers:
+        question, answer = line.strip().split('. ')
+        print(f"Question {question}: Correct Answer - {answer}")
+
+# Main program
+print("Welcome to the Quiz!")
+print("\nQuestions:")
+display_questions('Questions.txt')
+
+input("\nPress Enter to reveal answers...")
+
+print("\nAnswers:")
+display_answers('Answers.txt')
+
