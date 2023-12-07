@@ -1,0 +1,25 @@
+#Python code to Count Alphabets, Special character Numeric values and space
+string=input(&quot;Please enter a string: &quot;)#take input from the user
+alphabets,num,special,space=0,0,0,0;#variable declaration and initilization
+a=[]
+d=[]
+spl=[]
+for i in range(len(string)):
+if(string[i].isalpha()): #check Alphabets letters
+#print(string[i],end=&quot;&quot;)
+alphabets+=1
+a.append(string[i])
+elif(string[i].isdigit()):#check numeric value
+#print(string[i],end=&quot;&quot;)
+num+=1
+d.append(string[i])
+elif(string[i].isspace()):#check space
+space+=1
+else:
+#print(string[i],end=&quot;&quot;)
+special+=1
+spl.append(string[i])
+print(&quot;Alpabets letters: &quot;,alphabets, a)
+print(&quot;\nnumbers: &quot;,num, d)
+print(&quot;\nSpace: &quot;,space)
+print(&quot;\nSpecial characters: &quot;,special, spl)
