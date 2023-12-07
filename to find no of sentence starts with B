@@ -1,0 +1,13 @@
+# Program to find number of sentences starts with &quot;B&quot;
+string=input(“Enter the Para: ”)
+str1=string.split(&quot; ...&quot;)
+str1.pop()
+print(&quot;Total number of lines:&quot;,len(str1))
+count=0
+for i in str1:
+str2=i.split()
+#print(str2)
+for j in str2:
+if j[0]==&quot;B&quot;:
+count=count+1
+print(&quot;Number of Sentences that start with letter B :&quot;,count)
